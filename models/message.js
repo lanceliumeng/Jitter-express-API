@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+// const normalize = require("normalize-mongoose");
 
 const Message = mongoose.Schema({
-  test: {
+  text: {
     type: String,
     required: true,
   },
@@ -14,5 +15,5 @@ const Message = mongoose.Schema({
     required: true,
   },
 });
-
+// Message.plugin(normalize);
 module.exports = mongoose.model("Message", Message);
